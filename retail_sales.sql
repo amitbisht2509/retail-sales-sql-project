@@ -1,42 +1,9 @@
-# Retail Sales SQL Analytics Project  
+--Problem Statement:
+--�Management needs a centralized SQL-based system to analyze sales performance,
+--identify top customers/products, and track revenue trends. Without these insights, 
+--decision-making remains guesswork, affecting growth and profitability.�
 
-## 📌 Project Overview  
-This project simulates a **Retail Sales Database** with 10,000+ rows of realistic data.  
-The goal is to analyze sales, customers, and product performance using SQL queries.  
-
-## 🛠 Dataset  
-- Customers (Customer details with country & city)  
-- Products (Product name, category, price)  
-- Orders (Order header: customer & date)  
-- Order_details (Order line items with quantity)  
-
-## ❓ Business Problem  
-Management needs insights into revenue trends, top customers, and product performance to make data-driven decisions.  
-
-**Key Questions Answered:**  
-1. What is the total revenue?  
-2. Which product categories generate the most revenue?  
-3. Who are the top 10 customers by spend?  
-4. What are the monthly sales trends?  
-5. What is the average order value?  
-6. How many repeat customers exist?  
-7. What are the top 5 products in each category?  
-8. How can we segment customers by spend?  
-9. What is the year-over-year revenue growth?  
-10. Which cities generate the most revenue in each country?  
-
-## 📊 Technologies Used  
-- SQL Server   
-- GitHub for version control  
-
-
-## 📈 Key Insights (from my dataset)  
-- Total Revenue ≈ 37205385.52  
-- Books is the highest revenue category.  
-- Top customer spent ≈ 130508.34 
-- YoY growth observed between 2023–2024 is 273.63 perc_ 
-
-##--Data Analysis
+--Data Analysis
 
 --1. Total Revenue 
 SELECT Round (SUM(od.Quantity * p.Price),2) AS TotalRevenue
@@ -141,6 +108,3 @@ GROUP BY Country, City
 select * from most_revenue
 where CityRank = 1
 order by CityRank;
-
-
-
