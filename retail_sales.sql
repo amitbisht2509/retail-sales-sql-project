@@ -1,11 +1,11 @@
 --Problem Statement:
---ìManagement needs a centralized SQL-based system to analyze sales performance,
+--‚ÄúManagement needs a centralized SQL-based system to analyze sales performance,
 --identify top customers/products, and track revenue trends. Without these insights, 
---decision-making remains guesswork, affecting growth and profitability.î
+--decision-making remains guesswork, affecting growth and profitability.‚Äù
 
 --Data Analysis
 
---1. Total Revenue 
+--1. Total Revenue-
 SELECT Round (SUM(od.Quantity * p.Price),2) AS TotalRevenue
 FROM order_details od
 JOIN Products p ON od.ProductID = p.ProductID;
