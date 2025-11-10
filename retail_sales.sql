@@ -5,7 +5,8 @@
 
 --Data Analysis
 
---1. Total Revenue-
+--1. Total Revenue
+
 SELECT Round (SUM(od.Quantity * p.Price),2) AS TotalRevenue
 FROM order_details od
 JOIN Products p ON od.ProductID = p.ProductID;
